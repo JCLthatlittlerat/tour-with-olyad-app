@@ -1,41 +1,45 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: transparent;
-  padding: 2rem;
 
-  max-width: var(--max-width);
-  /* border: 1px solid; */
-  /* box-shadow: var(--dark-shadow); */
-}
-.App h1 {
-  font-weight: normal;
-}
 
-.App button {
-  border: none;
-  padding: 0.3rem 1rem;
-  background-color: var(--clr-primary-5);
-  color: var(--clr-white);
-  border-radius: var(--radius);
-  font-size: small;
-  cursor: pointer;
-  transition: var(--transition);
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    width: var(--fixed-width);
+    /* border: 1px solid; */
+    /* box-shadow: var(--dark-shadow); */
+
+}
+.App h1{
+    font-weight: normal;
 }
 
-.App .refresh-btn:hover {
-  background-color: var(--clr-primary-7);
+
+.App button{
+    border: none;
+    padding: .3rem 1rem ;
+    background-color: var(--clr-primary-5);
+    color: var(--clr-white);
+    border-radius: var(--radius);
+    font-size: small;
+    cursor: pointer;
+    transition: var(--transition);
 }
 
-h1 {
-  margin-top: 3rem;
-  font-size: 2rem;
-  cursor: pointer;
-  text-align: center;
+.App .refresh-btn:hover{
+    background-color: var(--clr-primary-7);
 }
-.underline {
-  /* border-bottom: 5px solid var(--clr-grey-4);  */
+
+h1{
+    margin-top: 3rem ;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+
+    
+}
+.underline{
+    /* border-bottom: 5px solid var(--clr-grey-4);  */
   width: 6rem;
   height: 0.25rem;
   background: var(--clr-primary-5);
@@ -43,100 +47,93 @@ h1 {
   margin-right: auto;
 }
 
-.tour {
-  /* border: 1px solid; */
-  box-shadow: var(--dark-shadow);
-  margin: 2rem 0;
-  background-color: var(--clr-white);
-  border-radius: var(--radius);
-  position: relative;
+.tour{
+    /* border: 1px solid; */
+    box-shadow: var(--dark-shadow);
+    margin: 2rem 0;
+    background-color: var(--clr-white);
+    border-radius: var(--radius);
+    position: relative;
 }
-.tour img {
-  display: block;
-  width: 100%;
-  height: 250px;
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
-  margin: auto;
-}
-
-.tour .small {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
+.tour img{
+    display: block;
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    margin: auto;
 }
 
-.tour .small h4 {
-  font-size: 1rem;
-}
-.tour h5 {
-  background-color: var(--clr-primary-1);
-  color: var(--clr-primary-5);
-  padding: 0.2rem 0.5rem;
-  width: fit-content;
-  position: absolute;
-  top: -1.4rem;
-  right: 0;
-  border-top-right-radius: var(--radius);
-}
-.tour h5:before {
-  content: "$";
+
+.tour .small{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
-.tour p {
-  position: relative;
-  margin: 0 1rem;
-  /* border: 1px solid; */
+.tour .small h4{
+    font-size: 1rem;
+}
+.tour h5{
+    background-color: var(--clr-primary-1);
+    color: var(--clr-primary-5);
+    padding: .2rem .5rem ;
+    width: fit-content;
+    position: absolute;
+    top: -1.4rem;
+    right: 0;
+    border-top-right-radius: var(--radius);
+}
+.tour h5:before{
+    content: '$';
+}
 
-  /* This method will cause the button to disappear */
-  /* height: 100px;
+
+.tour p{
+    position: relative;
+    margin: 0 1rem;
+    /* border: 1px solid; */
+
+    /* This method will cause the button to disappear */
+    /* height: 100px;
     overflow: hidden; */
+
 }
 
-.tour p button {
-  border: none;
-  background-color: transparent;
-  color: blue;
-  /* text-decoration: underline; */
-  cursor: pointer;
-  text-decoration: dotted;
+
+
+
+.tour p button{
+    border: none;
+    background-color: transparent;
+    color: blue;
+    /* text-decoration: underline; */
+    cursor: pointer;
+    text-decoration:dotted ;
 }
 
-.tour small {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  /* border: 1px solid; */
-  height: 50px;
+.tour small{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border: 1px solid; */
+    height: 50px;
 }
 
-.tour small button {
-  padding: 0.2rem 2.5rem;
-  border: 1px solid var(--clr-red-light);
-  background-color: transparent;
-  border-radius: var(--radius);
-  color: var(--clr-red-dark);
-  cursor: pointer;
-  font-size: 0.9rem;
+.tour small button{
+    padding: .2rem 2.5rem;
+    border: 1px solid var(--clr-red-light);
+    background-color: transparent;
+    border-radius: var(--radius);
+    color: var(--clr-red-dark);
+    cursor: pointer;
+    font-size: .9rem;
 }
-.tour small button:hover {
-  background-color: var(--clr-red-dark);
-  color: var(--clr-white);
-}
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+.tour small button:hover{
+    background-color: var(--clr-red-dark);
+    color: var(--clr-white);
+
 }
 
-@media (width<=40rem) {
-  .cards {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-}
-@media (max-width: 940px) and (min-width: 39rem) {
-  .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+

@@ -1,0 +1,139 @@
+
+
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    width: var(--fixed-width);
+    /* border: 1px solid; */
+    /* box-shadow: var(--dark-shadow); */
+
+}
+.App h1{
+    font-weight: normal;
+}
+
+
+.App button{
+    border: none;
+    padding: .3rem 1rem ;
+    background-color: var(--clr-primary-5);
+    color: var(--clr-white);
+    border-radius: var(--radius);
+    font-size: small;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.App .refresh-btn:hover{
+    background-color: var(--clr-primary-7);
+}
+
+h1{
+    margin-top: 3rem ;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+
+    
+}
+.underline{
+    /* border-bottom: 5px solid var(--clr-grey-4);  */
+  width: 6rem;
+  height: 0.25rem;
+  background: var(--clr-primary-5);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tour{
+    /* border: 1px solid; */
+    box-shadow: var(--dark-shadow);
+    margin: 2rem 0;
+    background-color: var(--clr-white);
+    border-radius: var(--radius);
+    position: relative;
+}
+.tour img{
+    display: block;
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    margin: auto;
+}
+
+
+.tour .small{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.tour .small h4{
+    font-size: 1rem;
+}
+.tour h5{
+    background-color: var(--clr-primary-1);
+    color: var(--clr-primary-5);
+    padding: .2rem .5rem ;
+    width: fit-content;
+    position: absolute;
+    top: -1.4rem;
+    right: 0;
+    border-top-right-radius: var(--radius);
+}
+.tour h5:before{
+    content: '$';
+}
+
+
+.tour p{
+    position: relative;
+    margin: 0 1rem;
+    /* border: 1px solid; */
+
+    /* This method will cause the button to disappear */
+    /* height: 100px;
+    overflow: hidden; */
+
+}
+
+
+
+
+.tour p button{
+    border: none;
+    background-color: transparent;
+    color: blue;
+    /* text-decoration: underline; */
+    cursor: pointer;
+    text-decoration:dotted ;
+}
+
+.tour small{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border: 1px solid; */
+    height: 50px;
+}
+
+.tour small button{
+    padding: .2rem 2.5rem;
+    border: 1px solid var(--clr-red-light);
+    background-color: transparent;
+    border-radius: var(--radius);
+    color: var(--clr-red-dark);
+    cursor: pointer;
+    font-size: .9rem;
+}
+.tour small button:hover{
+    background-color: var(--clr-red-dark);
+    color: var(--clr-white);
+
+}
+
+

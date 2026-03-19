@@ -3,8 +3,8 @@ import './App.css';
 import Tours from './components/Tours';
 import Loading from "./components/Loading";
 
-// const url = 'https://course-api.com/react-tours-project';
-const url = '/react-tours-project';
+const url = 'https://course-api.com/react-tours-project';
+// const url = '/react-tours-project';
 
 function App() {
   // fetching the data is complete try maping the data and rendering it to Tours.jsx component

@@ -21,9 +21,9 @@ function App() {
       const res = await fetch('/netlify/functions/fetchData.js');
       const result = await res.json();
       console.log('this is from fetchData: ', result)
-      // setData(result)
-      // console.log(result);
-      // setLoading(false)
+      setData(result)
+      console.log(result);
+      setLoading(false)
     } catch (error) {
       console.log(`Error from fetchData: ${error.message}`)
       setLoading(false)

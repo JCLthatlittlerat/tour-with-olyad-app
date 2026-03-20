@@ -12,21 +12,34 @@ function App() {
   const [loading, setLoading] = useState(true)
   async function fetchData() {
     try {
-      //   "private": true,
-      //     "proxy": "https://course-api.com",
-      setLoading(true)
-      // const res = await fetch(url);
-      // console.log('Raw response: ', res)
-      // const result = await res.json();
-      const res = await fetch('/netlify/functions/fetchData.js');
-      const result = await res.json();
-      console.log('this is from fetchData: ', result)
-      setData(result)
-      console.log(result);
-      setLoading(false)
+      // In local dev you can hit the API directly for a fail-safe path.
+      // In Netlify hosted env, use the function route.
+      const apiUrl = process.env.NODE_ENV === 'development'
+        ? 'https://www.course-api.com/react-tours-project'
+        : '/.netlify/functions/fetchData';
+
+      setLoading(true);
+      const res = await fetch(apiUrl);
+
+      if (!res.ok) {
+        const body = await res.text();
+        throw new Error(`Fetch failed (${res.status}) ${res.statusText}: ${body.slice(0, 150)}`);
+      }
+
+      const text = await res.text();
+      let result;
+      try {
+        result = JSON.parse(text);
+      } catch (jsonErr) {
+        throw new Error(`Invalid JSON from ${apiUrl}: ${text.slice(0, 150)}`);
+      }
+
+      console.log('this is from fetchData: ', result);
+      setData(result);
+      setLoading(false);
     } catch (error) {
-      console.log(`Error from fetchData: ${error.message}`)
-      setLoading(false)
+      console.log(`Error from fetchData: ${error.message}`);
+      setLoading(false);
     }
   }
 

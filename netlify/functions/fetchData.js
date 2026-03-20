@@ -1,6 +1,6 @@
 export async function handler(event, context) {
     try {
-        const response = await fetch("https://course-api.com/react-tours-project");
+        const response = await fetch("https://www.course-api.com/react-tours-project");
 
         if (!response.ok) {
             return {

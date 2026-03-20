@@ -3,7 +3,7 @@ import './App.css';
 import Tours from './components/Tours';
 import Loading from "./components/Loading";
 
-const url = 'https://course-api.com/react-tours-project';
+// const url = 'https://course-api.com/react-tours-project';
 // const url = '/react-tours-project';
 
 function App() {
@@ -15,12 +15,15 @@ function App() {
       //   "private": true,
       //     "proxy": "https://course-api.com",
       setLoading(true)
-      const res = await fetch(url);
-      console.log('Raw response: ', res)
+      // const res = await fetch(url);
+      // console.log('Raw response: ', res)
+      // const result = await res.json();
+      const res = await fetch('/netlify/functions/fetchData.js');
       const result = await res.json();
-      setData(result)
-      console.log(result);
-      setLoading(false)
+      console.log('this is from fetchData: ', result)
+      // setData(result)
+      // console.log(result);
+      // setLoading(false)
     } catch (error) {
       console.log(`Error from fetchData: ${error.message}`)
       setLoading(false)
